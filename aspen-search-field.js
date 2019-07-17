@@ -1,9 +1,9 @@
 import { PolymerElement,html } from '@polymer/polymer/polymer-element.js';
 import { afterNextRender } from '@polymer/polymer/lib/utils/render-status.js';
 import '@vaadin/vaadin-text-field/vaadin-text-field';
-import '@polymer/iron-icon/iron-icon.js'
+import '@polymer/iron-icons/iron-icons.js'
 
-import './asp-icons.js'
+import './aspen-icons.js'
 /**
  * `aspen-search-field` This component allows the user to perform a search.  The class contains a "reset" button that clears
  *  the searchTerm.
@@ -21,7 +21,7 @@ class AspenSearchField extends PolymerElement {
                 display: block;
                 --background-color: transparent;
                 --input-background-color: #909090;
-                --color: white;
+                --color: black;
                 --width: 410px;
             }
 
@@ -51,7 +51,7 @@ class AspenSearchField extends PolymerElement {
         </style>
 
         <vaadin-text-field label="[[label]]" placeholder="[[placeholder]]" value="{{value}}" autofocus="">
-            <iron-icon id="reset" visible\$="[[isVisible]]" icon="aspen:cancel" on-tap="__handleClear" slot="suffix"></iron-icon>
+            <iron-icon id="reset" visible\$="[[isVisible]]" icon="aspen:cancel" on-click="__handleClear" slot="suffix"></iron-icon>
         </vaadin-text-field>
 `;
   }
@@ -123,7 +123,6 @@ class AspenSearchField extends PolymerElement {
    * @param {String} value the search term value
    */
   __handleChange(value){
-      
       // if there are no characters in the search field, hide the 'reset' button.
       let isVisible = (value.length > 0)
       this.set('isVisible', isVisible);
@@ -144,6 +143,7 @@ class AspenSearchField extends PolymerElement {
    * @param {Event} e the event object
    */
   __handleClear(e){
+      console.log("hello")
       this.set("value", '');
   }
 }

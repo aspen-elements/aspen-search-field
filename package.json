@@ -10,6 +10,7 @@
   "main": "aspen-search-field.js",
   "dependencies": {
     "@polymer/iron-icon": "^3.0.1",
+    "@polymer/iron-icons": "^3.0.1",
     "@polymer/polymer": "^3.0.0",
     "@vaadin/vaadin-text-field": "^2.4.7"
   },
