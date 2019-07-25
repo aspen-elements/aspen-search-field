@@ -19,7 +19,7 @@
     "@webcomponents/webcomponentsjs": "^2.0.0"
   },
   "description": "This component allows the user to perform a search.  The class contains a \"reset\" button that clears the searchTerm.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "directories": {
     "test": "test"
   },
