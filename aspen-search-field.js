@@ -143,7 +143,6 @@ class AspenSearchField extends PolymerElement {
    * @param {Event} e the event object
    */
   __handleClear(e){
-      console.log("hello")
       this.set("value", '');
   }
 }
